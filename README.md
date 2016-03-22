@@ -1,5 +1,7 @@
 bower-installer [![Build Status](https://travis-ci.org/blittle/bower-installer.png?branch=master)](https://travis-ci.org/blittle/bower-installer)
 ===============
+**NOTE**: This project is looking for a [new project owner/maintainer](https://github.com/blittle/bower-installer/issues/149)
+
 
 Tool for installing bower dependencies that won't include entire repos. Although Bower works great
 as a light-weight tool to quickly install browser dependencies, it currently does not provide much
