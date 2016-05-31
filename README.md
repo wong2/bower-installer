@@ -11,11 +11,11 @@ functionality for installing specific "built" components for the client.
 
 ```javascript
 {
-  "name" : "test",
-  "version": "0.1",
-  "dependencies" : {
-    "backbone" : "latest"
-  }
+    "name": "test",
+    "version": "0.1",
+    "dependencies": {
+        "backbone": "latest"
+    }
 }
 ```
 If `bower install` is run on this configuration file, the entire backbone repository will be pulled down
@@ -29,14 +29,14 @@ your bower.json an `install` key and `path` attribute:
 
 ```javascript
 {
-  "name" : "test",
-  "version": "0.1",
-  "dependencies" : {
-    "backbone" : "latest"
-  },
-  "install" : {
-    "path" : "some/path"
-  }
+    "name": "test",
+    "version": "0.1",
+    "dependencies": {
+        "backbone": "latest"
+    },
+    "install": {
+        "path": "some/path"
+    }
 }
 ```
 
@@ -61,18 +61,18 @@ can override an existing main file path or provide a non-existant one:
 
 ```javascript
 {
-  "name" : "test",
-  "version": "0.1",
-  "dependencies" : {
-    "backbone" : "latest",
-    "requirejs" : "latest"
-  },
-  "install" : {
-    "path" : "some/path",
-    "sources" : {
-      "requirejs" : "bower_components/requirejs/require.js"
+    "name": "test",
+    "version": "0.1",
+    "dependencies": {
+        "backbone": "latest",
+        "requirejs": "latest"
+    },
+    "install": {
+        "path": "some/path",
+        "sources": {
+            "requirejs": "bower_components/requirejs/require.js"
+        }
     }
-  }
 }
 ```
 If bower installer is run on this configuration, `require.js` and `backbone.js` will all appear under
@@ -84,22 +84,22 @@ an `Array` instead of a `String` inside the sources hash. Or you can use file ma
 
 ```javascript
 {
-  "name" : "test",
-  "version": "0.1",
-  "dependencies" : {
-    "jquery-ui" : "latest",
-    "datejs": "*"
-  },
-  "install" : {
-    "path" : "some/path",
-    "sources" : {
-      "jquery-ui" : [
-        "bower_components/jquery-ui/ui/jquery-ui.custom.js",
-        "bower_components/jquery-ui/themes/start/jquery-ui.css"
-      ],
-      "datejs": "bower_components/datejs/build/*.*"
+    "name": "test",
+    "version": "0.1",
+    "dependencies": {
+        "jquery-ui": "latest",
+        "datejs": "*"
+    },
+    "install": {
+        "path": "some/path",
+        "sources": {
+            "jquery-ui": [
+            "bower_components/jquery-ui/ui/jquery-ui.custom.js",
+            "bower_components/jquery-ui/themes/start/jquery-ui.css"
+            ],
+            "datejs": "bower_components/datejs/build/*.*"
+        }
     }
-  }
 }
 ```
 
@@ -107,25 +107,25 @@ an `Array` instead of a `String` inside the sources hash. Or you can use file ma
 Files can be installed to multiple locations based upon file type or regular expression. Do so by modifying the `path` to be a map of file-type
  locations. Example:
  ```javascript
-{
-  "name" : "test",
-  "version": "0.1",
-  "dependencies" : {
-    "jquery-ui" : "latest"
-  },
-  "install" : {
-    "path" : {
-      "css": "src/css",
-      "js": "src/js",
-      "/[sc|le]ss$/": "src/css"
+ {
+    "name": "test",
+    "version": "0.1",
+    "dependencies": {
+        "jquery-ui": "latest"
     },
-    "sources" : {
-      "jquery-ui" : [
-        "bower_components/jquery-ui/ui/jquery-ui.custom.js",
-        "bower_components/jquery-ui/themes/start/jquery-ui.css"
-      ]
+    "install": {
+        "path": {
+            "css": "src/css",
+            "js": "src/js",
+            "/[sc|le]ss$/": "src/css"
+        },
+        "sources": {
+            "jquery-ui": [
+            "bower_components/jquery-ui/ui/jquery-ui.custom.js",
+            "bower_components/jquery-ui/themes/start/jquery-ui.css"
+            ]
+        }
     }
-  }
 }
 ```
 
@@ -140,7 +140,7 @@ Paths can be custom configurable with variables (key, name and version):
     },
     "install": {
         "base":  "build",
-        "path" : {
+        "path": {
             "js": "{name}/js",
             "css": "{name}/css",
             "eot": "{name}/fonts",
@@ -156,49 +156,49 @@ Will create this output structure:
 ```
 build/
     bootstrap/
-      js
-      css
-      fonts
+        js
+        css
+        fonts
     jquery
-      js
+        js
 ```
 
 #Rename files during copy
 Files can be renamed when bower-installer is copying them to their new destination. Do so by modifying the `mapping` object. Example:
  ```javascript
-{
-  "name" : "test",
-  "version": "0.1",
-  "dependencies/" : {
-    "jquery-ui" : "latest"
-  },
-  "install" : {
-    "path" : "some/path",
-    "sources" : {
-      "jquery-ui" : {
-        "mapping": [
-          {"bower_components/jquery-ui/ui/jquery-ui.js": "jquery-ui.js"},
-          {"bower_components/jquery-ui/ui/minified/jquery-ui.min.js": "jquery-ui-min-new-name.js"}
-        ]
-      }
+ {
+    "name": "test",
+    "version": "0.1",
+    "dependencies/": {
+        "jquery-ui": "latest"
+    },
+    "install": {
+        "path": "some/path",
+        "sources": {
+            "jquery-ui": {
+                "mapping": [
+                {"bower_components/jquery-ui/ui/jquery-ui.js": "jquery-ui.js"},
+                {"bower_components/jquery-ui/ui/minified/jquery-ui.min.js": "jquery-ui-min-new-name.js"}
+                ]
+            }
+        }
     }
-  }
 }
 ```
 
 #Ignore files
 Files can be ignored and not copied. Do so by adding the appropriate  to the `ignore` array. In the following example, `ember-model` has as dependency on `ember` and `handlebars`, so normally `ember` and the `handlebars` js files would be copied but in this case we don't want them copied over. Example:
  ```javascript
-{
-  "name" : "test",
-  "version": "0.1",
-  "dependencies": {
-    "ember-model" : "0.0.8"
-  },
-  "install": {
-    "path": "build/src",
-    "ignore": ["ember", "handlebars"]
-  }
+ {
+    "name": "test",
+    "version": "0.1",
+    "dependencies": {
+        "ember-model": "0.0.8"
+    },
+    "install": {
+        "path": "build/src",
+        "ignore": ["ember", "handlebars"]
+    }
 }
 ```
 
@@ -207,20 +207,20 @@ You can specify a folder and get all files inside it preserving its folder struc
 
 ```javascript
 {
-  "name" : "test",
-  "version": "0.1",
-  "dependencies": {
-    "datatables-bootstrap3" : "latest"
-  },
-  "install": {
-    "path": {
-      "scss": "build/styles",
-      "js": "build/js"
+    "name": "test",
+    "version": "0.1",
+    "dependencies": {
+        "datatables-bootstrap3": "latest"
+    },
+    "install": {
+        "path": {
+            "scss": "build/styles",
+            "js": "build/js"
+        }
+        "sources": {
+            "datatables-bootstrap3": "bower_components/datatables-bootstrap3/BS3/assets/**"
+        }
     }
-    "sources" : {
-      "datatables-bootstrap3" : "bower_components/datatables-bootstrap3/BS3/assets/**"
-    }
-  }
 }
 ```
 
