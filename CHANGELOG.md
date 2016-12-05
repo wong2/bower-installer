@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 1.3.1 - 2016-12-05
+
+### Other changes
+
+- Forgot to bump release in [package.json](https://github.com/rquadling/bower-installer/package.json)
+
 ## 1.3.0 - 2016-12-05
 
 ### Other changes
