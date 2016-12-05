@@ -1,7 +1,5 @@
-bower-installer [![Build Status](https://travis-ci.org/blittle/bower-installer.png?branch=master)](https://travis-ci.org/blittle/bower-installer)
+bower-installer [![Build Status](https://travis-ci.org/rquadling/bower-installer.png?branch=master)](https://travis-ci.org/rquadling/bower-installer)
 ===============
-**NOTE**: This project is looking for a [new project owner/maintainer](https://github.com/blittle/bower-installer/issues/149)
-
 
 Tool for installing bower dependencies that won't include entire repos. Although Bower works great
 as a light-weight tool to quickly install browser dependencies, it currently does not provide much
@@ -223,24 +221,3 @@ You can specify a folder and get all files inside it preserving its folder struc
     }
 }
 ```
-
-##Change log
- - 1.2.0 - Allow matching by a regular expression instead of just file extension. Thank you to [@g105b](https://github.com/blittle/bower-installer/pull/101)
- - 1.1.0 - Updates to the configuration key API allowing {key}, {version}, and {name}. Also do not require a base path parameter. Thank you to [@kimus](http://github.com/blittle/bower-installer/pull/96)!
- - 1.0.0 - Breaking API changes, --keep flag removed in favor of --remove-install-path or -p - [#53](https://github.com/blittle/bower-installer/issues/53)
-         - Destination paths configurable - [#70](https://github.com/blittle/bower-installer/pull/70)
-         - Fixes [#83](https://github.com/blittle/bower-installer/pull/83), [#78](https://github.com/blittle/bower-installer/pull/78), [#76](https://github.com/blittle/bower-installer/pull/76)
- - 0.8.4 - Add silent option to avoid console.log output. --silent or -s closes [#58](https://github.com/blittle/bower-installer/pull/58)
- - 0.8.3 - Path can now be blank, allowing for install into root of project. fixes [#59](https://github.com/blittle/bower-installer/pull/59)
- - 0.8.2 - Upgrade bower to fix underlying bugs.
- - 0.8.0 - Add an option for not removing the destination directories (--keep or -k). Preserve folder structures per extensions issue [#52](https://github.com/blittle/bower-installer/pull/52)
- - 0.7.0 - Preserve folder structure when using glob patterns.
- - 0.6.1 - The commandline flag --remove or -r will remove the "bower_components" directory when installation completes.
- - 0.6.0 - Add file globbing and a travis-ci enabled test suite.
- - 0.5.0 - Add the ignore option
- - 0.4.0 - Remove file-utils dependency
-
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/blittle/bower-installer/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
