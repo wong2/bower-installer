@@ -1,6 +1,14 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 1.3.2 - 2016-12-06
+
+### Other changes
+
+- Fix broken link in Spec for mapping (Thanks to [Benson Trent](https://github.com/rquadling/bower-installer/pull/158))  
+  Update package dependencies, upgrade lowdash  
+  Fix install: Remove unsafe version of minimatch
+
 ## 1.3.1 - 2016-12-05
 
 ### Other changes
