@@ -4,8 +4,8 @@
     "main": "src/main/app.js",
     "dependencies": {
         "jquery-ui" : "latest",
-        "ember-bootstrap": "https://github.com/emberjs-addons/ember-bootstrap/releases/download/01c440e23a4772f5caabe9d8e27e0b6ac9b35c6c/ember-bootstrap.js",
-        "ember-easyForm": "http://builds.dockyard.com.s3.amazonaws.com/ember-easyForm/latest/ember-easyForm.js"
+        "ember-bootstrap": "http://github.com/emberjs-addons/ember-bootstrap/releases/download/01c440e23a4772f5caabe9d8e27e0b6ac9b35c6c/ember-bootstrap.js",
+        "ember-dialog": "https://cdnjs.cloudflare.com/ajax/libs/ember-dialog/1.2.5/ember.dialog.min.js"
     },
     "install": {
         "path": "build/src",
@@ -15,9 +15,9 @@
                 {"bower_components/ember-bootstrap/index.js": "ember-bootstrap.js"}
               ]
             },
-            "ember-easyForm": {
+            "ember-dialog": {
               "mapping": [
-                {"bower_components/ember-easyForm/index.js": "subdirectory/ember-easyForm.js"}
+                {"bower_components/ember-dialog/index.js": "subdirectory/ember.dialog.min.js"}
               ]
             }
         }

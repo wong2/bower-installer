@@ -134,7 +134,7 @@ bower.commands
           }
           pakcfg.key = key;
 
-          if(!cfg.ignore || (cfg.ignore && !_.contains(cfg.ignore, key)) ) {
+          if(!cfg.ignore || (cfg.ignore && !_.includes(cfg.ignore, key)) ) {
             if(_.isArray(dep)) {
                 async.each(dep, function(subDep, callback) {
                     installer.installDependency(subDep, pakcfg, cfg, paths, options.silent, callback);
