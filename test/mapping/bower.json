@@ -17,7 +17,7 @@
             },
             "ember-dialog": {
               "mapping": [
-                {"bower_components/ember-dialog/index.js": "subdirectory/ember.dialog.min.js"}
+                {"bower_components/ember-dialog/index.js": "subdirectory1/subdirectory2/ember.dialog.min.js"}
               ]
             }
         }

@@ -1,6 +1,8 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 1.3.3 - 2016-12-12
+- Fix multiple levels of subdirectory when mapping (Thanks to [Jonathan Tougas](https://github.com/rquadling/bower-installer/issues/160))
 
 ## 1.3.2 - 2016-12-06
 - Fix broken link in Spec for mapping (Thanks to [Benson Trent](https://github.com/rquadling/bower-installer/pull/158))  
