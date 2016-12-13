@@ -50,10 +50,12 @@ if (options.help) {
 try {
   cfg = require(path.join(basePath, 'bower.json')).install;
 } catch (e) {
+  console.error('Error while loading bower.json', e)
   try {
     cfg = require(path.join(basePath, 'component.json')).install;
   } catch (e) {
-    throw new Error('Neither bower.json nor component.json present');
+    console.error('Error while loading component.json', e)
+    throw new Error('No valid bower.json or component.json present');
   }
 }
 var paths;
